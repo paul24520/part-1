@@ -15,12 +15,10 @@
             <button class="action-button">
               <span class="burger img-icon"></span>
             </button>
-            <img
-              class="notmobile separator"
-              src="image/separator.svg"
-              alt=""
-            />
-            <a href="#"><img src="image/logo.svg" alt="Логотип" /></a>
+            <div class="tools-bf"></div>
+            <a class="logo" href="#"
+              ><img src="image/logo.svg" alt="Логотип"
+            /></a>
           </div>
           <div class="header__right">
             <button class="action-button notmobile">
@@ -32,7 +30,7 @@
             <button class="action-button notmobile">
               <span class="profile img-icon"></span>
             </button>
-            <img src="image/separator.svg" alt="" />
+            <div class="tools-bf"></div>
             <button class="action-button">
               <span class="tools img-icon"></span>
             </button>
@@ -47,29 +45,35 @@
       <div class="container">
         <div class="title">
           <div class="title__name">
-            <img src="image/titleline.svg" alt="" />
             <h1>Услуги и сервисы</h1>
           </div>
           <div class="title__wrapper">
-            <a class="title__link"
+            <a href="#" class="title__link"
               ><span>Оставить заявку</span><span class="tools img-icon"></span
             ></a>
-            <a class="title__link"
+            <a href="#" class="title__link"
               ><span>Статус ремонта</span><span class="search img-icon"></span
             ></a>
           </div>
         </div>
-        <div class="scroll">
-          <ul class="scroll__list">
-            <li class="scroll__list-item scroll__list-item--active">
+        <div class="navigation">
+          <nav class="navigation__list">
+            <a
+              href="#"
+              class="navigation__list-item navigation__list-item--active"
+            >
               Ремонтируемые бренды
-            </li>
-            <li class="scroll__list-item">Ремонтируемые устройства</li>
-            <li class="scroll__list-item">Цены на услуги</li>
-            <li class="scroll__list-item">Адреса сервисных центров</li>
-            <li class="scroll__list-item">Специальные цены</li>
-            <li class="scroll__list-item">Отзывы</li>
-          </ul>
+            </a>
+            <a href="#" class="navigation__list-item"
+              >Ремонтируемые устройства</a
+            >
+            <a href="#" class="navigation__list-item">Цены на услуги</a>
+            <a href="#" class="navigation__list-item"
+              >Адреса сервисных центров</a
+            >
+            <a href="#" class="navigation__list-item">Специальные цены</a>
+            <a href="#" class="navigation__list-item">Отзывы</a>
+          </nav>
         </div>
         <div class="info">
           <div class="text-wrapper">
@@ -86,7 +90,6 @@
             </div>
             <div class="continue">
               <button class="continue-btn">
-                <img src="image/expend.svg" />
                 <div class="cont">Читать далее</div>
               </button>
             </div>

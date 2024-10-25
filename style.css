@@ -29,6 +29,8 @@ html {
 }
 a {
   font-family: "TT Lakes Regular";
+  text-decoration: none;
+  color: inherit;
 }
 .header {
   height: 88px;
@@ -46,15 +48,24 @@ body {
   padding: 0px;
 }
 h1 {
+  padding-left: 8px;
   font-family: "TT Lakes Bold";
   margin-left: 12px;
   max-width: 288px;
   font-size: 28px;
   line-height: 40px;
+  position: relative;
 }
-ul {
-  margin: 0;
-}
+h1::before{
+  content:"";
+  position:absolute;
+  border-radius: 8px;
+  left: -16px;
+  top:0px;
+  width:8px;
+  height:40px;
+  background:#41F6D7;
+  }
 .container {
   max-width: 1121px;
   margin: 0 auto;
@@ -69,6 +80,24 @@ ul {
   width: 40px;
   height: 40px;
   border: none;
+}
+.tools-bf {
+  position: relative;
+  width: 16px;
+}
+.tools-bf::before {
+  content:"";
+  position:absolute;
+  border-radius: 10%;
+  left: 10px;
+  top:-15px;
+  width:2px;
+  height:32px;
+  background: #EAEAEA;
+
+}
+.header__left .tools-bf {
+display: none;
 }
 .img-icon {
   position: relative;
@@ -119,14 +148,14 @@ ul {
   padding-top: 24px;
 }
 
-.scroll__list {
+.navigation__list {
   display: flex;
   overflow: auto;
   list-style-type: none;
   padding-left: 16px;
   scrollbar-width: none;
 }
-.scroll {
+.navigation {
   margin-bottom: 24px;
 }
 .continue {
@@ -151,25 +180,39 @@ ul {
   margin-right: 16px;
   margin-bottom: 16px;
   font-family: "TT Lakes Regular";
+  height: 6rem;
+  overflow-y: hidden;
 }
 .cont {
   margin-left: 8px;
+  position: relative;
+  padding-left: 20px;
+  
+}
+.cont::before {
+  content: "";
+  top: -4px;
+  left: -8px;
+  position: absolute;
+  background: url(image/expend.svg);
+  width: 20px;
+  height: 20px;
 }
 main {
   background-color: #f8f8f8;
 }
 
-.scroll__list-item {
+.navigation__list-item {
   white-space: nowrap;
   padding: 8px 9px 8px 17px;
   border-radius: 6px;
   border: 2px solid transparent;
-  cursor: pointer;
   font-family: "TT Lakes Regular";
   color: #7e7e82;
 }
-.scroll__list-item--active {
+.navigation__list-item--active {
   border: 2px solid #b8ffec;
+  background: #fff;
 }
 .main-img {
   width: 100vw;
@@ -218,7 +261,7 @@ display: none;
     display: block;
   }
   .title,
-  .scroll {
+  .navigation {
     margin-bottom: 32px;
   }
   .info {
@@ -232,15 +275,21 @@ display: none;
   .main-img {
     width: 100%;
   }
+  .logo {
+    padding-left: 15px;
+  }
+  .header__left .tools-bf {
+    display: block;
+    }
 }
 @media all and (min-width: 1121px) {
   .header {
     display: none;
   }
-  .scroll__list-item {
+  .navigation__list-item {
     padding: 8px 20px;
   }
-  .scroll__list {
+  .navigation__list {
     flex-wrap: wrap;
   }
   .title {
