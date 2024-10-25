@@ -1,1 +1,1 @@
-https://github.com/paul24520/part-1
+https://paul24520.github.io/part-1/
